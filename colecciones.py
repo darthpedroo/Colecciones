@@ -38,3 +38,19 @@ class ContenedorIterable(Iterable):
 
     def __iter__(self):
         return IteradorDeColeccion(self._elementos, 9)
+
+class ContenedorIterable2(Iterable):
+
+    def __init__(self) -> None:
+        self._elementos = []
+
+    def __str__(self):
+        return f"El container: {str(self._elementos)}"
+    
+    def agregar(self, elemento, tipo_prioridad):
+        self._elementos.append((elemento, tipo_prioridad))
+
+    def __iter__(self):
+        for i in self._elementos:
+           yield i 
+        
