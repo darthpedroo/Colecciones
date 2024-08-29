@@ -30,16 +30,18 @@ anterior, entonces implementá un iterador)
 -Se debe poder obtener un iterador a la pila mediante el operador iter(pila). 💹
 -Este iterador debe recorrer los elementos de la pila en el mismo orden en que estos serían desapilados, pero sin desapilarlos (es decir, sin modificar la pila).💹
 
-7) Utilizando TDD. Modificar la pila para agregar un método __reversed__(self) el cual devuelva un iterador inverso que permita recorrer la pila en el orden opuesto.
+7) Utilizando TDD. Modificar la pila para agregar un método __reversed__(self) el cual devuelva un iterador inverso que permita recorrer la pila en el orden opuesto.💹
 
-8) Utilizando TDD. Crear una nueva estructura PilaConPrioridad, con funcionalidad similar a la
-Pila, respetando las siguientes diferencias. El apilado debe recibir un parámetro de prioridad,
-que puede ser 0 o 1. En caso de recibir una prioridad distinta, se debe levantar un error
-ValueError. A la hora de desapilar, se debe desapilar siempre el elemento de mayor prioridad. Si
-hay más de un elemento de mayor prioridad, se debe desapilar el último de los apilados de esa
-prioridad. Por ejemplo, si apilamos los siguientes elementos (5, prioridad 1), (3, prioridad 0), (4,
-prioridad 0), (6, prioridad 1), el desapilado debe ser: 6, 5, 4, 3. Antes de implementar este item,
-pensar y responder la siguiente pregunta:
+8) Utilizando TDD. 
+
+Crear una nueva estructura PilaConPrioridad, con funcionalidad similar a la
+Pila, respetando las siguientes diferencias. 
+
+El apilado debe recibir un parámetro de prioridad,que puede ser 0 o 1. 
+En caso de recibir una prioridad distinta, se debe levantar un error ValueError.
+
+A la hora de desapilar, se debe desapilar siempre el elemento de mayor prioridad.
+Si hay más de un elemento de mayor prioridad, se debe desapilar el último de los apilados de esa prioridad. Por ejemplo, si apilamos los siguientes elementos (5, prioridad 1), (3, prioridad 0), (4,prioridad 0), (6, prioridad 1), el desapilado debe ser: 6, 5, 4, 3. Antes de implementar este item, pensar y responder la siguiente pregunta:
 
 b) ¿Cuáles de las siguientes técnicas conviene utilizar a la hora de extender el
 comportamiento de Pila para este item, y cuáles no? Justificar en cada caso.
@@ -51,5 +53,4 @@ Abstracción.
 Delegación.
 
 9) Utilizando TDD. Extender la implementación de PilaConPrioridad para que en vez de
-solamente soportar las prioridades 0 y 1, la misma se instancie con un parámetro que indique la
-máxima prioridad soportada.
+solamente soportar las prioridades 0 y 1, la misma se instancie con un parámetro que indique la máxima prioridad soportada.

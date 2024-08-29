@@ -45,7 +45,11 @@ class TestPila(unittest.TestCase):
     def test_06_iterar_sobre_pila(self):
         for i in self._pila:
             print(":V", i)
-
+            
+    def test_07_iterar_sobre_pila_invertida(self):
+        for i in reversed(self._pila):
+            print("hawk", i)
+        
 
 
 

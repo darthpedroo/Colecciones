@@ -21,7 +21,6 @@ class Pila(Iterable):
             raise PilaLlena()    
         self._pila.append(elemento)
         
-
     def desapilar(self):
         if len(self._pila) <= 0:
             raise PilaVacia()
@@ -37,3 +36,6 @@ class Pila(Iterable):
         for elemento in reversed(self._pila):
             yield elemento
 
+    def __reversed__(self):
+        for elemento in self._pila:
+            yield elemento
