@@ -43,6 +43,8 @@ class ContenedorIterable2(Iterable):
 
     def __init__(self) -> None:
         self._elementos = []
+        self._current_type = 1
+        self._cantidad_prioridades = 9
 
     def __str__(self):
         return f"El container: {str(self._elementos)}"
@@ -51,6 +53,18 @@ class ContenedorIterable2(Iterable):
         self._elementos.append((elemento, tipo_prioridad))
 
     def __iter__(self):
-        for i in self._elementos:
-           yield i 
+        while self._current_type <= self._cantidad_prioridades:
+            for i in self._elementos:
+                if i[1] == self._current_type:
+                    yield i 
+            self._current_type += 1
+            
+            
+                
+
+                
+               
+            
+        
+         
         
