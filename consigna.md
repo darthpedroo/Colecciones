@@ -15,17 +15,22 @@ retornarse en este orden: 5, 3, 8, 4, 10.
 recorrer el contenedor, en vez de retornar un iterador (si ya usaste un generator en el item
 anterior, entonces implementá un iterador)
 
-6) Implementar la estructura Pila usando TDD, teniendo en cuenta la siguiente descripción. Una
-pila soporta una cantidad máxima de elementos. 
-El método apilar agrega un elemento a la pila.
-Si la pila está llena se debe levantar un error del tipo PilaLlena. 
-El método desapilar retira un
-elemento de la pila, y lo retorna. 
-El elemento desapilado siempre debe ser el último que se apiló.
-Si la pila está vacía, se debe levantar un error del tipo PilaVacia. Se debe poder saber la cantidad de elementos apilados utilizando el operador len(pila). Se debe poder obtener un iterador a la pila mediante el operador iter(pila). Este iterador debe recorrer los elementos de la pila en el mismo orden en que estos serían desapilados, pero sin desapilarlos (es decir, sin modificar la pila).
+6) Implementar la estructura Pila usando TDD, teniendo en cuenta la siguiente descripción. 
 
-7) Utilizando TDD. Modificar la pila para agregar un método __reversed__(self) el cual devuelva
-un iterador inverso que permita recorrer la pila en el orden opuesto.
+-Una pila soporta una cantidad máxima de elementos. 💹
+-El método apilar agrega un elemento a la pila.💹
+-Si la pila está llena se debe levantar un error del tipo PilaLlena.💹
+
+-El método desapilar retira un elemento de la pila, y lo retorna.💹
+-El elemento desapilado siempre debe ser el último que se apiló.💹
+
+-Si la pila está vacía, se debe levantar un error del tipo PilaVacia.💹
+
+-Se debe poder saber la cantidad de elementos apilados utilizando el operador len(pila).💹
+-Se debe poder obtener un iterador a la pila mediante el operador iter(pila). 💹
+-Este iterador debe recorrer los elementos de la pila en el mismo orden en que estos serían desapilados, pero sin desapilarlos (es decir, sin modificar la pila).💹
+
+7) Utilizando TDD. Modificar la pila para agregar un método __reversed__(self) el cual devuelva un iterador inverso que permita recorrer la pila en el orden opuesto.
 
 8) Utilizando TDD. Crear una nueva estructura PilaConPrioridad, con funcionalidad similar a la
 Pila, respetando las siguientes diferencias. El apilado debe recibir un parámetro de prioridad,
