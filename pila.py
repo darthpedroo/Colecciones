@@ -42,8 +42,8 @@ class Pila(Iterable):
 
 
 class PilaConPrioridad(Pila):
-    def __init__(self, cantidad_maxima_elementos_pila=20):
-        self._prioridades = [0, 1]
+    def __init__(self, maxima_prioridad_soportada, cantidad_maxima_elementos_pila=20):
+        self._prioridades = list(range(0, maxima_prioridad_soportada+1))
         self._current_priority = 1
         super().__init__(cantidad_maxima_elementos_pila)
 

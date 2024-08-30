@@ -39,7 +39,6 @@ class TestPila(unittest.TestCase):
 
     def test_05_pila_vacia_levanta_error_pila_vacia(self):
         pilavacia = Pila()
-
         with self.assertRaises(PilaVacia):
             pilavacia.desapilar()
 
@@ -52,12 +51,11 @@ class TestPila(unittest.TestCase):
             print("hawk", i)
 
     def test_08_apilar_en_pila_con_prioridad(self):
-        pila = PilaConPrioridad()
+        pila = PilaConPrioridad(2)
         pila.apilar("5", 1)
         pila.apilar("3", 0)
         pila.apilar("4", 0)
         pila.apilar("6", 1)
-
         print(pila)
         pila.desapilar()
         print(pila)
@@ -67,6 +65,7 @@ class TestPila(unittest.TestCase):
         print(pila)
         pila.desapilar()
         print(pila)
+    
 
 
 if __name__ == "__main__":
