@@ -6,10 +6,11 @@ class IteradorDeColeccion(Iterator):
         self._coleccion = coleccion
         self._indice = 0
         self._curr_type = 1
-        self._cant_prioridades = cant_prioridades #Nose si está bien puesto aca la cantidad de prioridades porque quizas el iterador no sea el mejor lugar para ponerlo
+        # Nose si está bien puesto aca la cantidad de prioridades porque quizas el iterador no sea el mejor lugar para ponerlo
+        self._cant_prioridades = cant_prioridades
 
     def __next__(self):
-        if self._curr_type <= self._cant_prioridades:  
+        if self._curr_type <= self._cant_prioridades:
             if self._indice < len(self._coleccion):
                 res = self._coleccion[self._indice]
                 self._indice += 1
@@ -39,6 +40,7 @@ class ContenedorIterable(Iterable):
     def __iter__(self):
         return IteradorDeColeccion(self._elementos, 9)
 
+
 class ContenedorIterable2(Iterable):
 
     def __init__(self) -> None:
@@ -48,7 +50,7 @@ class ContenedorIterable2(Iterable):
 
     def __str__(self):
         return f"El container: {str(self._elementos)}"
-    
+
     def agregar(self, elemento, tipo_prioridad):
         self._elementos.append((elemento, tipo_prioridad))
 
@@ -56,15 +58,7 @@ class ContenedorIterable2(Iterable):
         while self._current_type <= self._cantidad_prioridades:
             for i in self._elementos:
                 if i[1] == self._current_type:
-                    yield i 
+                    yield i
             self._current_type += 1
-            
-            
-                
 
-                
-               
-            
-        
-         
-        
+

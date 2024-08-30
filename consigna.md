@@ -35,11 +35,15 @@ anterior, entonces implementá un iterador)
 Crear una nueva estructura PilaConPrioridad, con funcionalidad similar a la
 Pila, respetando las siguientes diferencias. 
 
-El apilado debe recibir un parámetro de prioridad,que puede ser 0 o 1. 
-En caso de recibir una prioridad distinta, se debe levantar un error ValueError.
+El apilado debe recibir un parámetro de prioridad,que puede ser 0 o 1. 💹
 
-A la hora de desapilar, se debe desapilar siempre el elemento de mayor prioridad.
-Si hay más de un elemento de mayor prioridad, se debe desapilar el último de los apilados de esa prioridad. Por ejemplo, si apilamos los siguientes elementos (5, prioridad 1), (3, prioridad 0), (4,prioridad 0), (6, prioridad 1), el desapilado debe ser: 6, 5, 4, 3. Antes de implementar este item, pensar y responder la siguiente pregunta:
+En caso de recibir una prioridad distinta, se debe levantar un error ValueError.💹
+
+A la hora de desapilar, se debe desapilar siempre el elemento de mayor prioridad.💹
+
+Si hay más de un elemento de mayor prioridad, se debe desapilar el último de los apilados de esa prioridad.💹
+
+Por ejemplo, si apilamos los siguientes elementos (5, prioridad 1), (3, prioridad 0), (4,prioridad 0), (6, prioridad 1), el desapilado debe ser: 6, 5, 4, 3. Antes de implementar este item, pensar y responder la siguiente pregunta:
 
 b) ¿Cuáles de las siguientes técnicas conviene utilizar a la hora de extender el
 comportamiento de Pila para este item, y cuáles no? Justificar en cada caso.

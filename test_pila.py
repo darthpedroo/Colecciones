@@ -1,5 +1,6 @@
 import unittest
-from pila import Pila, PilaLlena, PilaVacia
+from pila import Pila, PilaLlena, PilaVacia, PilaConPrioridad
+
 
 class TestPila(unittest.TestCase):
 
@@ -13,8 +14,8 @@ class TestPila(unittest.TestCase):
 
     def test_01_pila_apilar(self):
         self._pila.apilar("if iam not back again this time tomorou")
-        print("pila:" , self._pila)
-    
+        print("pila:", self._pila)
+
     def test_02_pila_desapilar(self):
         pila = Pila()
         pila.apilar("mamaaaaaa")
@@ -38,24 +39,34 @@ class TestPila(unittest.TestCase):
 
     def test_05_pila_vacia_levanta_error_pila_vacia(self):
         pilavacia = Pila()
-        
+
         with self.assertRaises(PilaVacia):
             pilavacia.desapilar()
 
     def test_06_iterar_sobre_pila(self):
         for i in self._pila:
             print(":V", i)
-            
+
     def test_07_iterar_sobre_pila_invertida(self):
         for i in reversed(self._pila):
             print("hawk", i)
-        
 
+    def test_08_apilar_en_pila_con_prioridad(self):
+        pila = PilaConPrioridad()
+        pila.apilar("5", 1)
+        pila.apilar("3", 0)
+        pila.apilar("4", 0)
+        pila.apilar("6", 1)
 
-
-
-
-  
+        print(pila)
+        pila.desapilar()
+        print(pila)
+        pila.desapilar()
+        print(pila)
+        pila.desapilar()
+        print(pila)
+        pila.desapilar()
+        print(pila)
 
 
 if __name__ == "__main__":
