@@ -5,11 +5,9 @@
 Diccionarios, Pilas, Colas.
 
 5a) Implementar la clase ContenedorIterable, la cual debe poder agregar números y debe
-permitir recorrerlos mediante un iterador. Los números agregados son de un tipo indicado por
-un número que se pasa como parámetro, que puede ser 1 o 2. Y deben ser recorridos en el
-mismo orden en que fueron agregados, primero todos los tipo 1, y luego todos los tipo 2, es
-decir, si se agregan los siguientes números (5, 1), (3, 1), (4, 2), (8, 1), (10, 2) al recorrer deben
-retornarse en este orden: 5, 3, 8, 4, 10.
+permitir recorrerlos mediante un iterador. 
+Los números agregados son de un tipo indicado por un número que se pasa como parámetro, que puede ser 1 o 2. 
+Y deben ser recorridos en el mismo orden en que fueron agregados, primero todos los tipo 1, y luego todos los tipo 2, es decir, si se agregan los siguientes números (5, 1), (3, 1), (4, 2), (8, 1), (10, 2) al recorrer deben retornarse en este orden: 5, 3, 8, 4, 10.
 
 5b) Implementar la clase ContenedorIterable2 igual a la anterior pero usando un generator para
 recorrer el contenedor, en vez de retornar un iterador (si ya usaste un generator en el item
